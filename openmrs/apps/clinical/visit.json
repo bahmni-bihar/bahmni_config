@@ -17,6 +17,8 @@
           "groupBy": "encounters",
           "obsConcepts": [
             "Vitals",
+            "BMI",
+            "BMI STATUS",
             "M/C Days"
           ],
           "labConcepts": ""
@@ -56,6 +58,8 @@
           "groupBy": "encounters",
           "obsConcepts": [
             "Vitals",
+            "BMI",
+            "BMI STATUS",
             "M/C Days"
           ],
           "labConcepts": ""
@@ -68,7 +72,7 @@
           "translationKey": "DISCHARGE_SUMMARY_DIAGNOSIS_KEY",
           "showCertainty": false,
           "showOrder": false,
-          "showDetailsButton": true
+          "showDetailsButton": false
         }
       },
       "historyAndExaminationNotes": {
@@ -85,7 +89,8 @@
             "Smoking History"
           ],
           "scope": "latest",
-          "numberOfVisits": "1"
+          "numberOfVisits": "1",
+          "showGroupDateTime": false
         }
       },
       "labResults": {
@@ -100,7 +105,8 @@
           "showDetailsButton": false,
           "showNormalLabResults": true,
           "showCommentsExpanded": true,
-          "showAccessionNotes": true
+          "showAccessionNotes": true,
+          "showGroupDateTime": false
         }
       },
       "Treatments": {
@@ -114,7 +120,8 @@
           "showDetailsButton": true,
           "showRoute": true,
           "showDrugForm": true,
-          "showProvider": false
+          "showProvider": false,
+          "showGroupDateTime": false
         }
       }
     }
