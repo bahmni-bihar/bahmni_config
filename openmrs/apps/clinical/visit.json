@@ -1,31 +1,4 @@
 {
-  "general": {
-    "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
-    "displayByDefault": true,
-    "printing": {
-      "title": "",
-      "header": "",
-      "logo": ""
-    },
-    "defaultSections": true,
-    "sections": {
-      "pivotTable": {
-        "type": "pivotTable",
-        "displayOrder": 0,
-        "title": "Vitals Flowsheet",
-        "config": {
-          "groupBy": "encounters",
-          "obsConcepts": [
-            "Vitals",
-            "BMI",
-            "BMI STATUS",
-            "M/C Days"
-          ],
-          "labConcepts": ""
-        }
-      }
-    }
-  },
   "OPD Summary": {
     "translationKey": "DASHBOARD_TAB_OPDSUMMARY_KEY",
     "displayByDefault": true,
@@ -34,6 +7,7 @@
       "header": "",
       "logo": ""
     },
+    "displayOrder": 0,
     "defaultSections": false,
     "sections": {
       "PatientInformation": {
@@ -81,10 +55,7 @@
         "translationKey": "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY",
         "config": {
           "conceptNames": [
-            "Chief Complaint",
-            "Non-Coded Chief Complaint",
-            "Chief Complaint Duration",
-            "Chief Complaint Notes",
+            "History and Examination",
             "Examination Notes",
             "Smoking History"
           ],
@@ -133,6 +104,8 @@
       "header": "",
       "logo": ""
     },
+    "displayByDefault": true,
+    "displayOrder": 1,
     "sections": {
       "PatientInformation": {
         "type": "patientInformation",
@@ -259,22 +232,33 @@
       }
     }
   },
-  "orders": {
-    "translationKey": "DASHBOARD_TAB_ORDERS_KEY",
+    "general": {
+    "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
+    "displayByDefault": false,
+    "printing": {
+      "title": "",
+      "header": "",
+      "logo": ""
+    },
+    "displayOrder": 2,
+    "defaultSections": true,
     "sections": {
-      "Radiology Orders": {
-        "type": "order",
+      "pivotTable": {
+        "type": "pivotTable",
         "displayOrder": 0,
-        "translationKey": "Radiology Orders",
+        "title": "Vitals Flowsheet",
         "config": {
-          "translationKey": "Radiology Orders",
-          "name": "ordersControl",
-          "orderType": "Radiology Order",
-          "conceptNames": [
-            "Summary"
-          ]
+          "groupBy": "encounters",
+          "obsConcepts": [
+            "Vitals",
+            "BMI",
+            "BMI STATUS",
+            "M/C Days"
+          ],
+          "labConcepts": ""
         }
       }
     }
   }
+
 }
